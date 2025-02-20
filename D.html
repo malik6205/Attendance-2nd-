@@ -25,7 +25,7 @@
             text-align: center;
              margin-bottom: 2px;
         }
-        u {
+        h3 {
             text-align: center;
              margin-bottom: 20px;
         }
@@ -119,7 +119,7 @@
             text-align: center;
              margin-bottom: 2px;
         }
-        u {
+        h3 {
             text-align: center;
              margin-bottom: 20px;
         }
@@ -170,8 +170,8 @@
 </head>
 <body>
  <h1>Today's Attendance Sheet</h1>
-<h2>4th Semester (Batch:- 2023-2027)</h2>
-  <u>Group D</u>
+<h2>2nd Semester (Batch:- 2024-2028)</h2>
+
 
   <div class="buttons-container">
     <button class="reset-btn" onclick="resetAttendance()">Reset Attendance</button>
@@ -180,11 +180,13 @@
 <div class="subject-select">
     <label for="subject">Subject:</label>
     <select id="subject">
-        <option value="Math">Med. Chem I (Practical)</option>
-        <option value="Physics">Ph. Cog. & Phytochem. I(Practical)</option>
-        <option value="Chemistry">Ph. Cology I(Practical)</option>
-        <option value="Computer Science">P.P II (Practical)</option>
-        <option value="Computer Science">Seminar or Function</option>
+        <option value="Math">HAP II (Theory)</option>
+        <option value="Physics">Biochemistry(Theory)</option>
+        <option value="Chemistry">Pathphysiology(Theory)</option>
+        <option value="Computer Science">CAP(Theory)</option>
+        <option value="Computer Science">POC I (Theory)</option>
+        <option value="Computer Science">EVS(Theory)</option>
+      <option value="Computer Science">Function/Out of class</option>
     </select>
 </div>
  <div id="dateTimeDisplay"></div>
@@ -209,29 +211,27 @@
 
 
   <script>
-    const students = [
-            { id: "AJU/230790", name: "AVISHEK KUMAR OJHA " },
-            { id: "AJU/230795", name: "KASHISH KUMARI " },
-            { id: "AJU/230807", name: "ASHUTOSH RANJAN " },
-            { id: "AJU/230925", name: "MD FIROZ " },
-            { id: "AJU/231013", name: "SAHIL CHOUDHARY " },
-            { id: "AJU/231034", name: "IQRA AHMAD " },
-            { id: "AJU/231248", name: "NISHANT KUMAR " },
-            { id: "AJU/231363", name: "RAHUL KUMAR " },
-            { id: "AJU/231391", name: "MEGHA JOSHI " },
-            { id: "AJU/231636", name: "SHRISTI YADAV " },
-            { id: "AJU/231647", name: "AKRITI SINHA " },
-            { id: "AJU/231650", name: "RISHAV KUMAR GUPTA " },
-            { id: "AJU/231653", name: "SUNIDHI SUMAN " },
-            { id: "AJU/231662", name: "SACHIN NARAYAN DEO " },
-            { id: "AJU/231753", name: "JATIN KUMAR MAHTO " },
-            { id: "AJU/231758", name: "GAURAV BHATTACHARJEE " },
-            { id: "AJU/232066", name: "RAUNAK KUMAR " },
-            { id: "AJU/232182", name: "JAY PRAKASH MAHTO " },
-            { id: "AJU/232183", name: "DILIP KUMAR MAHTO " },
-            { id: "AJU/232323", name: "PRADYUMNA DAS " },
-            { id: "AJU/232328", name: "PRATIMA KUMARI " },
-    ];
+  const students = [
+    { id: "AJU/241934", name: "RIYA MODI" },
+    { id: "AJU/241946", name: "DINDAYAL MAHATO" },
+    { id: "AJU/241979", name: "SOMEN SENAPATI" },
+    { id: "AJU/241994", name: "AJIT KUMAR SAW" },
+    { id: "AJU/242004", name: "PRIYANSHU BHARTI" },
+    { id: "AJU/242011", name: "SOURAV KUMAR SINGH" },
+    { id: "AJU/242012", name: "ARUSHI SHARMA" },
+    { id: "AJU/242021", name: "JALJEET KOUR" },
+    { id: "AJU/242041", name: "RISHIKESH KUMAR" },
+    { id: "AJU/242078", name: "ISHWAR SOREN" },
+    { id: "AJU/242079", name: "BHANU PRATAP YADAV" },
+    { id: "AJU/242087", name: "SIMRAN SHUKLA" },
+    { id: "AJU/242116", name: "SURAJ PRATAP" },
+    { id: "AJU/242120", name: "RAKESH MURMU" },
+    { id: "AJU/242126", name: "ABHISHEK KUMAR" },
+    { id: "AJU/242134", name: "MUSKAN" },
+    { id: "AJU/242176", name: "ALINA JAWED" },
+    { id: "AJU/242182", name: "MOHAMMAD SARWAR KHAN" },
+    { id: "AJU/242268", name: "JAY PRAKASH PRHADHAN" }
+  ];
 
     // Global object to store attendance data
     let attendanceData = {};

@@ -25,7 +25,7 @@
             text-align: center;
              margin-bottom: 2px;
         }
-        u {
+        h3 {
             text-align: center;
              margin-bottom: 20px;
         }
@@ -119,7 +119,7 @@
             text-align: center;
              margin-bottom: 2px;
         }
-        u {
+        h3 {
             text-align: center;
              margin-bottom: 20px;
         }
@@ -170,8 +170,8 @@
 </head>
 <body>
  <h1>Today's Attendance Sheet</h1>
-<h2>4th Semester (Batch:- 2023-2027)</h2>
-  <u>Group B</u>
+<h2>2nd Semester (Batch:- 2024-2028)</h2>
+
 
   <div class="buttons-container">
     <button class="reset-btn" onclick="resetAttendance()">Reset Attendance</button>
@@ -180,11 +180,13 @@
 <div class="subject-select">
     <label for="subject">Subject:</label>
     <select id="subject">
-        <option value="Math">Med. Chem I (Practical)</option>
-        <option value="Physics">Ph. Cog. & Phytochem. I(Practical)</option>
-        <option value="Chemistry">Ph. Cology I(Practical)</option>
-        <option value="Computer Science">P.P II (Practical)</option>
-        <option value="Computer Science">Seminar or Function</option>
+        <option value="Math">HAP II (Theory)</option>
+        <option value="Physics">Biochemistry(Theory)</option>
+        <option value="Chemistry">Pathphysiology(Theory)</option>
+        <option value="Computer Science">CAP(Theory)</option>
+        <option value="Computer Science">POC I (Theory)</option>
+        <option value="Computer Science">EVS(Theory)</option>
+      <option value="Computer Science">Function/Out of class</option>
     </select>
 </div>
  <div id="dateTimeDisplay"></div>
@@ -209,30 +211,33 @@
 
 
   <script>
-    const students = [
-            { id: "AJU/230471", name: "HARI PRIYA PANDA " },
-            { id: "AJU/230476", name: "ANISHA SHARMA " },
-            { id: "AJU/230495", name: "APPU MAHATO " },
-            { id: "AJU/230502", name: "MD WASIM ANSARI " },
-            { id: "AJU/230527", name: "NANDANI KUMARI PANDEY " },
-            { id: "AJU/230545", name: "BAIJNATH KUMAR SAHANI " },
-            { id: "AJU/230550", name: "ROHIT RAJ " },
-            { id: "AJU/230558", name: "PRIYANKA KUMARI " },
-            { id: "AJU/230563", name: "KHUSHI SHARMA " },
-            { id: "AJU/230565", name: "RAMANAND KUMAR" },
-            { id: "AJU/230567", name: "NAVEEN MARDI" },
-            { id: "AJU/230598", name: "ANUPAMA GORAI" },
-            { id: "AJU/230642", name: "CHAMPA KUMARI" },
-            { id: "AJU/230645", name: "KULDIP MAHTO" },
-            { id: "AJU/230670", name: "DHARMENDRA KUMAR MAHTO " },
-            { id: "AJU/230680", name: "ASHISH YADAV " },
-            { id: "AJU/230685", name: "SURAJ KUMAR CHOUDHARY " },
-            { id: "AJU/230701", name: "MOHAMMAD SABA UDDIN " },
-            { id: "AJU/230704", name: "ANIMESH KUMAR BHAKAT " },
-            { id: "AJU/230712", name: "ANJALI KUMARI " },
-            { id: "AJU/230758", name: "AMAN KUMAR " },
-            { id: "AJU/230783", name: "ADARSH KUMAR " },
-    ];
+  const students = [
+    { id: "AJU/240534", name: "ABHINANDAN KUMAR RAI" },
+    { id: "AJU/240553", name: "KARAN NATH MAHATO" },
+    { id: "AJU/240572", name: "RAMAN MAHATO" },
+    { id: "AJU/240585", name: "KESHAV KUMAR" },
+    { id: "AJU/240600", name: "MOUSHAMI GIRI" },
+    { id: "AJU/240609", name: "VIJAY MAHATO" },
+    { id: "AJU/240623", name: "BALRAM HANSDA" },
+    { id: "AJU/240657", name: "SADIQ AKHTAR" },
+    { id: "AJU/240662", name: "SNEHA KUMARI" },
+    { id: "AJU/240708", name: "ATAUR RAHMAN" },
+    { id: "AJU/240717", name: "VANSH RAJ" },
+    { id: "AJU/240728", name: "RAJESH MANDAL" },
+    { id: "AJU/240736", name: "RAJWANT" },
+    { id: "AJU/240763", name: "SATYA NARAYAN PATRA" },
+    { id: "AJU/240773", name: "UJJWAL KUMAR SINGH" },
+    { id: "AJU/240810", name: "ARDHENDU MAHATO" },
+    { id: "AJU/240812", name: "SNEHA MANDAL" },
+    { id: "AJU/240829", name: "ADESH MAHATO" },
+    { id: "AJU/240844", name: "KUMARI NANDANI" },
+    { id: "AJU/240847", name: "DEOVARDHAN SINGH" },
+    { id: "AJU/240895", name: "GAURAV KUMAR RANJAN" },
+    { id: "AJU/240942", name: "PRIYANSHU KUMAR BHADANI" },
+    { id: "AJU/240955", name: "SATYAJEET KUMAR" },
+    { id: "AJU/240958", name: "ARYAN ISHAN" },
+    { id: "AJU/240964", name: "AMRIT GUPTA" },
+  ];
 
     // Global object to store attendance data
     let attendanceData = {};

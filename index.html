@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Attendance Options</title>
+  <!-- Include the Google Font: Dancing Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Global styles with animated background */
+    /* Global styles – updated with new font */
     body {
-      font-family: 'Brush Script', Cambria, sans-serif;
+      font-family: 'Dancing Script', cursive;
       margin: 30px;
       display: flex;
       flex-direction: column;
@@ -16,61 +18,55 @@
       animation: backgroundPulse 10s infinite alternate;
     }
     @keyframes backgroundPulse {
-      0% { background-color: #F08080; }
-      50% { background-color: #FF7F50; }
+      0%   { background-color: #F08080; }
+      50%  { background-color: #FF7F50; }
       100% { background-color: #F08080; }
     }
 
-    /* Header animation */
+    /* Header styling using fadeInUp animation */
     h2 {
       margin-bottom: 20px;
       text-decoration: underline;
-      animation: fadeInDown 1s ease-out;
+      color: #fff;
+      animation: fadeInUp 1s ease-in-out;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* Button container slide-in */
+    /* Button container styling */
     .button-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 30px;
-      animation: slideIn 1s ease-out;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
+      gap: 20px;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease-in-out;
     }
 
-    /* Button styling and hover effects */
+    /* Button styling with hover transitions */
     button {
       padding: 15px 30px;
       font-size: 16px;
       border: none;
       cursor: pointer;
       border-radius: 8px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
     }
     #regular-attendance {
       background-color: #28a745;
-      color: white;
-    }
-    #regular-attendance:hover {
-      background-color: #218838;
-      transform: scale(1.1);
     }
     #group-attendance {
       background-color: #007bff;
-      color: white;
     }
-    #group-attendance:hover {
-      background-color: #0056b3;
-      transform: scale(1.1);
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     }
+
+    /* Optional extra group-button effect */
     .group-button {
       background-color: #ffc107;
       color: black;
@@ -88,43 +84,46 @@
       100% { transform: scale(1); }
     }
 
-    /* Link styling */
-    a {
-      text-decoration: none;
-    }
-
-    /* Image fade-in effect */
+    /* Image fade-in effect with faster load time */
     img {
       max-width: 100%;
       height: auto;
       display: block;
       margin: 20px auto;
       opacity: 0;
-      animation: fadeIn 2s forwards;
+      animation: fadeIn 0.5s forwards;
     }
     @keyframes fadeIn {
       from { opacity: 0; }
-      to { opacity: 1; }
+      to   { opacity: 1; }
     }
-    /* Stagger the second image for extra effect */
     img:nth-of-type(2) {
-      animation-delay: 1s;
+      animation-delay: 0.2s;
+    }
+
+    /* Link styling with a subtle upward fade */
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      margin-top: 20px;
+      animation: fadeInUp 1s ease-out;
     }
   </style>
 </head>
 <body>
-  <h2>❤️B Pharmacy (2nd Sem)❤️</h2>
-  <img src="1.jpg" alt="Description of Image">
+  <h2>❤️ B Pharmacy (2nd Sem) ❤️</h2>
+  <img src="1.jpg" alt="First Image">
   <div class="button-container">
       <button id="regular-attendance" onclick="window.location.href='ass.html'">
-        😑Regular Attendance😑
+        😑 Regular Attendance 😑
       </button>
       <button id="group-attendance" onclick="window.location.href='group_attendance.html'">
-        😑❤Group Attendance❤😑
+        😑❤ Group Attendance ❤😑
       </button>
   </div>
-  <img src="2.png" alt="Description of Image">
-  <a href="instagram://user?username=l_ma_lik_l" target="_blank" style="text-decoration: underline; color: black;" 
+  <img src="2.png" alt="Second Image">
+  <a href="instagram://user?username=l_ma_lik_l" target="_blank"
      onclick="setTimeout(function() { window.location = 'https://www.instagram.com/l_ma_lik_l'; }, 1000);">
     ❤️ Ma Lik ❤️
   </a>
